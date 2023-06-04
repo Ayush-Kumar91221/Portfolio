@@ -144,9 +144,6 @@ strong{
   font-weight: 600;
 }
 @media  screen and(max-width:500px) {
-  #intro{
-    transform: scale(75%);
-  }
 }
 .typewriter{
   animation: blink;
@@ -178,4 +175,13 @@ strong{
 .nav-active span{
   color:black;
   font-weight: 600;
+}
+
+@media  screen and (max-width:600px) {
+    *{
+      font-size: 80%;
+    }
+    .sideNav span{
+      font-size: 1rem;
+    }
 }

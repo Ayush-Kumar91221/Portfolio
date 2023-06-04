@@ -26,9 +26,9 @@ const typewriter=()=>{
 typewriter();
 
 var anchorTags = document.querySelectorAll('a[href^="#"]');
-anchorTags.forEach(function(anchorTag) {
-anchorTag.addEventListener('click', smoothScroll);
-});
+for (let i=1;i<anchorTags.length;i++){
+    anchorTags[i].addEventListener('click', smoothScroll);
+}
 
 // Smooth scrolling function
 function smoothScroll(e) {
