@@ -1,0 +1,181 @@
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}
+
+.text-teal{
+  color: rgba(0, 128, 115, 0.8);
+}
+/* styling all the icons of google fonts */
+.material-icons {
+  font-size: 2.2rem;
+  color: rgba(0, 128, 115, 0.8);
+  padding: 0 0.25rem;
+}
+
+#sidebar-mobile{
+  -webkit-box-shadow: 0px 9px 8px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 9px 8px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 9px 8px 0px rgba(0,0,0,0.1);
+  height: 4.5rem;
+  background: rgb(255,255,255);
+  display: none;
+  position: sticky;
+  z-index: 10;
+}
+
+.hamburger-btn{
+  padding-left: 1rem;
+  font-size: 3rem;
+  scale: 1.2;
+  
+}
+
+.sidebar{
+  width: 20rem;
+  background: white ;
+  line-height: 4rem;
+  height: 100vh;
+  z-index: 11;
+}
+
+.myPic{
+  border: 7px solid rgba(0, 128, 115, 0.3);
+  box-sizing: border-box;
+  width: 10rem;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.sideNav{
+    display: flex;
+    align-items: center;
+    color: rgba(0, 128, 115, 1); /* teal colour*/
+    gap: 1rem;
+    padding-left: 1rem;
+    transition: border 0.3s;
+}
+
+.sideNav:hover{
+    background: rgba(211, 209, 209, 0.3);
+    border-left: 3px solid rgba(0, 128, 115, 0.8);
+}
+
+@media  screen and (max-width:1000px){
+    .logo,.myPic,.sidebar hr{
+        display: none;
+    }
+    .sidebar{
+        position: absolute;
+        left: -200%;
+    }
+    #sidebar-mobile{
+      position: sticky;
+      top: 0;
+      display: flex;
+    }
+    .active{
+        top: 4.5rem;
+        left: 0;
+    }
+    #intro{
+        height: calc(100vh-4.5rem);
+        padding: 2.5rem;
+    }
+}
+
+#main-content{
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow-y: scroll;
+    background: url("./assests/images/bg.png") repeat ;
+}
+
+#intro{
+    min-height: 100vh;
+    background: #64998d;
+    color: white;
+    line-height: 10rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    padding: 5rem;
+}
+
+#intro img{
+  width: 60px;
+  border-radius: 50%;
+  margin: 0rem 1rem 1rem 1rem;
+  display: inline;
+  background-color: white;
+}
+.scale-on-hover:hover{
+  transform: scale(120%);
+  transition: all 0.5s;
+}
+
+.sections h1{
+  background: #00796b;
+  padding: 1.25rem 1rem;
+  color: #ffffff;
+}
+
+#Skills img{
+  width: 10vw;
+  min-width: 70px;
+  min-height: 70px;
+  padding: 0rem 0.5rem;
+}
+#Skills p{
+  text-align: center;
+}
+strong{
+  color: #000000;
+  font-weight: 600;
+}
+@media  screen and(max-width:500px) {
+  #intro{
+    transform: scale(75%);
+  }
+}
+.typewriter{
+  animation: blink;
+}
+.typer{
+  animation: blinkd 1.5s linear infinite;
+}
+@keyframes blinkd {
+  0%{
+    opacity: 0;
+  };
+  25%{
+    opacity: 0.25;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  75%{
+    opacity: 0.75;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.nav-active{
+  background: rgba(211, 209, 209, 0.3);
+  border-left: 5px solid rgba(0, 128, 115, 0.8);
+}
+.nav-active span{
+  color:black;
+  font-weight: 600;
+}
